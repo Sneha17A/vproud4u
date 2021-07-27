@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Vproud4u</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="projectstyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script> 
+  <script>
+    $(document).ready(function(){
+      $('#icon').click(function(){
+        $('ul').toggleClass('show')
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <!-- NAVIGATON BAR -->
+  <nav class="navbar">
+    <label class="logo">VProud4U</label>
+    <ul>
+      <li><a class="active" href="#">About us</a></li>
+      <li><a href="#">Gallery</a></li>
+      <li><a href="#">Achievements</a></li>
+      <li><a href="#">Contact us</a></li>
+    </ul>
+    <label id="icon">
+      <i class="fa fa-bars"></i>
+    </label>
+  </nav>
+
+<!-- IMAGE NAVIGATION -->
+  <div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <img src="C:\Users\sneha\Documents\web dev/image1.jpg" style="width:100%">
+    <div class="text">Caption Text</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="C:\Users\sneha\Documents\web dev/image2.jpg" style="width:100%">
+    <div class="text">Caption Two</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="C:\Users\sneha\Documents\web dev/image3.jpg" style="width:100%">
+    <div class="text">Caption Three</div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+  </div>
+  <script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace("active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html>
+
+
+<!-- ABOUT US -->
+<!-- <div class="about">
+  <h1>Who We are?</h1>
+  <p>We are the persons having a generous heart to elevate someone's life to their desires by giving possible assist, love and knowledge. Let us Explain what we are initiated?<br><br> 1️⃣ We are celebrating our birthdays year by year grandly with our parents, friends, partners, relatives etc., Sounds big naa.! Let think about the persons who is waiting on the door by keeping an eye in the campus zone with the thinking of "Anyone will come, we will enjoy today, let's celebrate with them, It will a special day for us🎁" - Those who are seperated by God from their parents, they don't know "Why we are here". We can't get back their parents, but we could stand with them as their parents/brothers/sisters/relatives👨‍👨‍👧‍👧.<br><br> 2️⃣ "Not Everyone get their needs at the right time" -We are aiming students who having a dream to achieve something in life and give back to the society.  With your help, we can help them at the right time and they give back to us when they have. It will help us to maintain in rotation without interrupting their expectations✨. <br><br>#wearehiring-Volunteers We want to connect with different kinds of students in different places with Multiple type of students problems. If you like to support us in your University/institute, then join as a volunteer in our team. #wearerequiring-Donors Those who can help us to solve the mentioned and any future needs, we need major support from you.</p>
+</div> -->
